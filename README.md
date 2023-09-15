@@ -1,6 +1,6 @@
 # Doda-AI
 
-# AI Assistant for Home Automation
+
 
 ![AI Assistant](demo.gif)
 
