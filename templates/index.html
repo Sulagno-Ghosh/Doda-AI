@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+</head>
+<body>
+    <h1>AI Chat</h1>
+    <form method="POST" action="/chat">
+        <input type="text" name="user_input" placeholder="Type your message...">
+        <button type="submit">Send</button>
+    </form>
+    <div class="chat-box">
+        {% if ai_response %}
+            <div class="message">
+                <p>User: {{ user_input }}</p>
+                <p>AI: {{ ai_response }}</p>
+            </div>
+            <audio controls>
+                <source src="data:audio/wav;base64,{{ audio }}" type="audio/wav">
+            </audio>
+        {% endif %}
+    </div>
+</body>
+</html>
